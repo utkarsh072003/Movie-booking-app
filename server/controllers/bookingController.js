@@ -1,3 +1,4 @@
+import { inngest } from "../inngest/index.js";
 import Booking from "../models/Booking.js";
 import Show from "../models/Show.js"
 import stripe from 'stripe'
@@ -27,12 +28,14 @@ export const createBooking = async(req , res)=>{
         const {showId, selectedSeats} = req.body;
         const {origin} = req.headers;
         // check if the seat is available for tthe selected show
-
+           
         const isAvailable = await checkSeatAvailability(showId, selectedSeats)
         if(!isAvailable){
             return res.json({success:false, message:"Selected seats are not available."})
         }
         const showData = await Show.findById(showId).populate('movie');
+
+        
 
         //create new booking
         const booking = await Booking.create({
@@ -78,6 +81,14 @@ export const createBooking = async(req , res)=>{
         booking.paymentLink = session.url
         await booking.save()
 
+        // Run inngest scheduler function to check payment status after 10 minutes
+
+        await inngest.send({
+            name:"app/checkpayment",
+            data:{
+                bookingId: booking._id.toString()
+            }
+        })
 
         res.json({success:true, url: session.url})
 

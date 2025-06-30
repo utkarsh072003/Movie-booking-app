@@ -1,2 +1,46 @@
-node_modules
+# Node modules
+node_modules/
+
+# Environment files
 .env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+
+# VSCode settings
+.vscode/
+
+# Optional: coverage & testing
+coverage/
+jest-output/
+
+# Next.js (if used in frontend)
+.next/
+
+# Parcel/Babel cache
+.cache/
+babel-cache/
+
+# Git temporary files
+*.swp
+*.swo
+
+# Firebase local emulators
+.firebase/
+
+# MongoDB dump files (optional)
+dump/
