@@ -1,32 +1,46 @@
-🎬 QuickShow – Movie Booking App
-QuickShow is a full-stack movie booking application that allows users to browse movies, select showtimes, choose seats, and book tickets online with real-time updates and notifications. Designed for both end-users and administrators, it provides a seamless digital experience for cinema booking with features such as email confirmations, intelligent seat holding, show management, and background workflows.
+# 🎬 QuickShow – Movie Booking App
 
-This app demonstrates a real-world architecture involving user authentication, workflow automation, and third-party integrations like email services (Brevo), making it a complete demonstration of real-time web app development.
+**QuickShow** is a modern full-stack web application that enables users to browse movies, select showtimes, reserve seats, and securely book movie tickets online. With a responsive interface, real-time seat management, and powerful admin tools, QuickShow aims to deliver a seamless cinema booking experience.
 
-👤 User-Side Features
-🔍 Search and browse movies by genre, language, or location
+Built using React, Node.js, MongoDB, Clerk for authentication, and Inngest for workflow automation, the app combines user convenience with backend automation and real-time communication via email services like Nodemailer and Brevo.
 
-📅 View detailed show timings and availability
+---
 
-🪑 Interactive seat selection with real-time updates
+## 📖 Description
 
-💳 Secure booking and payment system
+QuickShow simplifies the movie booking process by allowing users to explore available movies, choose showtimes, and book seats through a highly interactive and intuitive interface. Administrators can manage movies, schedules, and users via a dedicated dashboard.
 
-📧 Email confirmation on successful bookings
+The platform includes intelligent features such as:
+- Real-time seat selection
+- Email-based booking confirmation
+- Show notifications
+- Temporary seat reservation for failed payments
+- Personalized experience through the ability to favorite movies
 
-📨 Get notified when new shows are added (via email)
+QuickShow simulates a real-world online cinema ticketing system with production-ready tools and architecture, making it a great portfolio piece and base for future expansion.
 
-⏳ Seat + booking data held for 10 minutes after failed payment (auto-canceled if not completed)
+---
 
-❤️ Mark and view favorite movies – Users can select movies as favorites to revisit or book later
+## 🚀 Features
 
-📄 View booking history and manage favorites
+### 👤 User Features
+- 🔍 **Browse and search** movies by genre, language, and location
+- 📅 **View showtimes** with live availability
+- 🪑 **Interactive seat selection** with real-time updates
+- 💳 **Secure booking and payment** flow
+- 📧 **Receive email confirmations** after successful bookings
+- 📩 **Get notified via email** when new shows are added
+- ⏳ **Auto-reserve seat for 10 minutes** after failed payments (auto-cancellation after timeout)
+- ❤️ **Mark movies as favorites** for quick access and booking later
+- 📄 **View and manage bookings** and favorite movies
 
-🛠️ Admin-Side Features
-🎞 Add, edit, or delete movies and showtimes
+### 🛠️ Admin Features
+- 🎞 **Add, update, or remove movies** and showtimes
+- 📊 **View bookings and user analytics**
+- 📬 **Trigger email notifications** for newly added shows
+- ⏱ **Automated cleanup** of unpaid bookings using Inngest workflows
+- 🔐 **Access control** via Clerk-based authentication (admin vs user)
 
-📊 View all bookings and user activity logs
+---
 
-📨 Email alerts sent automatically to users when new shows are added
 
-⏱ Inngest background task to auto-delete unpaid bookings after 10 minutes
