@@ -55,7 +55,6 @@ QuickShow simulates a real-world online cinema ticketing system with production-
 |------------------|------------------------|-------------------------------------------------------------------------|
 | **Frontend**     | React.js               | Building interactive UI components                                      |
 |                  | Tailwind CSS           | Utility-first CSS framework for styling                                |
-|                  | Shadcn/UI              | UI components built on Tailwind and Radix                              |
 |                  | React Icons            | Icon support for UI                                                     |
 |                  | Axios                  | API requests to backend                                                 |
 | **Backend**      | Node.js + Express.js   | Server and API handling                                                 |
