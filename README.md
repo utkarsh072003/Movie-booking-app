@@ -61,6 +61,7 @@ QuickShow simulates a real-world online cinema ticketing system with production-
 | **Database**     | MongoDB                | Storing users, movies, bookings, and schedules                         |
 | **Authentication** | Clerk.dev           | User sign-up, login, session handling, and access control              |
 | **Workflow Automation** | Inngest        | Background jobs and event-based workflows (e.g., cancel unpaid bookings after 10 mins) |
+| **Payment**    | stripe            |     Secure and reliable payment integration                                 |
 | **Email Notifications** | Nodemailer + Brevo (Sendinblue SMTP) | Send confirmation emails, new show alerts, and automated booking updates |
 | **Email Provider** | [Brevo (Sendinblue)](https://www.brevo.com) | SMTP-based email delivery with free tier and dashboard support         |
 | **Environment Variables** | dotenv       | Managing secrets like Mongo URI, SMTP keys, Clerk keys, etc.           |
